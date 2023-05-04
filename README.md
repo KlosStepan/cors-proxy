@@ -1,3 +1,11 @@
+# Forked
+Use
+```js
+axios.get(URLProxyPoint, { headers: { 'Target-URL': URLEndPoint } })
+```
+server.js line 27/28
+___ 
+
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 # CORS Proxy
