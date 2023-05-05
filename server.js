@@ -24,7 +24,11 @@ app.all('*', function (req, res, next) {
             res.send(500, { error: 'There is no Target-Endpoint header in the request' });
             return;
         }
-        request({ url: targetURL + req.url, method: req.method, rejectUnauthorized: false, json: req.body, headers: {'Authorization': req.header('Authorization')} },
+        console.error("targetURL")
+        console.error(targetURL)
+        console.error("req.url")
+        console.error(req.url)
+        request({ url: targetURL /*+ req.url*/, method: req.method, rejectUnauthorized: false, json: req.body, headers: {'Authorization': req.header('Authorization')} },
         //request({ url: targetURL + req.url, method: req.method, json: req.body /*, headers: {'Authorization': req.header('Authorization')}*/ },
             function (error, response, body) {
                 if (error) {
